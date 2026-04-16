@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./Gallery.css";
 
 import gallery1 from "./assets/exterior-real.png";
-import gallery2 from "./assets/res1.png";
-import gallery3 from "./assets/res2.png";
-import gallery4 from "./assets/res3.png";
+import gallery2 from "./assets/res1.PNG";
+import gallery3 from "./assets/res2.PNG";
+import gallery4 from "./assets/res3.PNG";
 import gallery5 from "./assets/pool.png";
-import gallery6 from "./assets/spa.png";
+import gallery6 from "./assets/spa.PNG";
 
 export default function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState(null);

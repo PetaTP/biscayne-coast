@@ -1,0 +1,329 @@
+.floorplans {
+  padding: 120px 0;
+  background: #ffffff;
+}
+
+.floorplans-header,
+.floorplans-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+
+.floorplans-header {
+  margin-bottom: 48px;
+}
+
+.floorplans-header-inner {
+  max-width: 700px;
+}
+
+.floorplans-label {
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8d8d8d;
+  margin-bottom: 18px;
+}
+
+.floorplans-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #23313d;
+}
+
+.floorplans-subtitle {
+  max-width: 560px;
+  color: #666;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.floorplans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.floorplan-card {
+  background: #f6f6f4;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #eceae6;
+  transition: transform 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.floorplan-card:hover {
+  transform: translateY(-4px);
+  border-color: #ddd8d2;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.floorplan-image-wrapper {
+  background: #fafafa;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+}
+
+.floorplan-image-wrapper img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.floorplan-info {
+  padding: 20px 22px 22px;
+}
+
+.floorplan-info h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #23313d;
+  margin: 0 0 8px;
+}
+
+.floorplan-size {
+  color: #888;
+  font-size: 0.95rem;
+  margin: 0 0 6px;
+}
+
+.floorplan-details {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.floorplan-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  padding: 40px;
+}
+
+.floorplan-modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.floorplan-modal-image {
+  max-width: 100%;
+  max-height: 78vh;
+  border-radius: 10px;
+  background: white;
+  padding: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.floorplan-modal-info {
+  margin-top: 18px;
+  text-align: center;
+  color: white;
+}
+
+.floorplan-modal-info h3 {
+  color: white;
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.floorplan-modal-info p {
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0 0 4px;
+}
+
+.floorplan-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #23313d;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.floorplan-arrow:hover {
+  transform: translateY(-50%) scale(1.06);
+  background: white;
+}
+
+.floorplan-arrow.left {
+  left: 30px;
+}
+
+.floorplan-arrow.right {
+  right: 30px;
+}
+
+.floorplan-close {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.floorplan-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .floorplans {
+    padding: 100px 0;
+  }
+
+  .floorplans-header,
+  .floorplans-grid {
+    width: min(100%, calc(100% - 80px));
+    padding: 0;
+  }
+
+  .floorplans-title {
+    font-size: 2.2rem;
+  }
+
+  .floorplans-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .floorplan-image-wrapper {
+    min-height: 230px;
+    padding: 24px;
+  }
+
+  .floorplan-modal {
+    padding: 32px;
+  }
+
+  .floorplan-arrow.left {
+    left: 20px;
+  }
+
+  .floorplan-arrow.right {
+    right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .floorplans {
+    padding: 80px 0;
+  }
+
+  .floorplans-header,
+  .floorplans-grid {
+    width: min(100%, calc(100% - 40px));
+    padding: 0;
+  }
+
+  .floorplans-header {
+    margin-bottom: 40px;
+  }
+
+  .floorplans-title {
+    font-size: 2rem;
+  }
+
+  .floorplans-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .floorplans-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .floorplan-image-wrapper {
+    min-height: 200px;
+    padding: 20px;
+  }
+
+  .floorplan-info {
+    padding: 20px;
+  }
+
+  .floorplan-info h3 {
+    font-size: 1.08rem;
+  }
+
+  .floorplan-size,
+  .floorplan-details {
+    font-size: 0.92rem;
+  }
+
+  .floorplan-modal {
+    padding: 20px;
+  }
+
+  .floorplan-modal-content {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .floorplan-modal-image {
+    max-width: 100%;
+    max-height: 75vh;
+    padding: 16px;
+  }
+
+  .floorplan-modal-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .floorplan-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 1.15rem;
+  }
+
+  .floorplan-arrow.left {
+    left: 12px;
+  }
+
+  .floorplan-arrow.right {
+    right: 12px;
+  }
+
+  .floorplan-close {
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}

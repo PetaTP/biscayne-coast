@@ -1,0 +1,146 @@
+.residences {
+padding: 120px 0;
+background: #f6f6f4;
+}
+
+.residences-header,
+.residence-grid {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 80px;
+box-sizing: border-box;
+}
+
+.residences-header {
+margin-bottom: 48px;
+}
+
+.residences-header-inner {
+max-width: 700px;
+}
+
+.residences-label {
+font-size: 0.82rem;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: #8d8d8d;
+margin-bottom: 18px;
+}
+
+.residences-title {
+font-size: 2.5rem;
+font-weight: 500;
+line-height: 1.1;
+color: #23313d;
+margin-bottom: 20px;
+}
+
+.residences-subtitle {
+max-width: 560px;
+color: #666;
+font-size: 1.05rem;
+line-height: 1.7;
+}
+
+.residence-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 24px;
+}
+
+.residence-card {
+background: #ffffff;
+border-radius: 12px;
+overflow: hidden;
+border: 1px solid #eceae6;
+transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.residence-card:hover {
+transform: translateY(-4px);
+border-color: #ddd8d2;
+}
+
+.residence-image-wrapper {
+height: 260px;
+overflow: hidden;
+background: #ddd;
+}
+
+.residence-image {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+transition: transform 0.45s ease;
+}
+
+.residence-card:hover .residence-image {
+transform: scale(1.03);
+}
+
+.residence-content {
+padding: 20px 22px 22px;
+}
+
+.residence-card-title {
+font-size: 1.2rem;
+font-weight: 500;
+color: #23313d;
+margin: 0 0 10px;
+}
+
+.residence-card-text {
+margin: 0;
+color: #666;
+line-height: 1.65;
+font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+.residences {
+padding: 100px 0;
+}
+
+.residences-header,
+.residence-grid {
+width: min(100%, calc(100% - 80px));
+padding: 0;
+}
+
+.residence-grid {
+grid-template-columns: 1fr;
+}
+
+.residences-title {
+font-size: 2.2rem;
+}
+}
+
+@media (max-width: 600px) {
+.residences {
+padding: 80px 0;
+}
+
+.residences-header,
+.residence-grid {
+width: min(100%, calc(100% - 40px));
+padding: 0;
+}
+
+.residences-header {
+margin-bottom: 40px;
+}
+
+.residences-title {
+font-size: 2rem;
+}
+
+.residence-image-wrapper {
+height: 220px;
+}
+
+.residence-content {
+padding: 20px;
+}
+}
